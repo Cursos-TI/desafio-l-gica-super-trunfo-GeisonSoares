@@ -49,11 +49,11 @@ int main()
 
 //Atraves da escolha do atributo predeterminado, realiza a comparação e exibe o vencedor
     if (PIB_PC1 > PIB_PC2){
-        printf("Vencedor: Salvador com R$%.3f de PIB per capita\n", PIB_PC1);
-        printf("Contra: R$%.3f de PIB per capita da Cidade de São Paulo\n", PIB_PC2);
+        printf("Vencedor: Salvador com R$%.2f de PIB per capita\n", PIB_PC1);
+        printf("Contra: R$%.2f de PIB per capita da Cidade de São Paulo\n", PIB_PC2);
     } else{
-        printf("Vencedor: São Paulo com R$%.3f de PIB per capita\n", PIB_PC2);
-        printf("Contra: R$%.3f de PIB per capita da Cidade de Salvador\n", PIB_PC1);
+        printf("Vencedor: São Paulo com R$%.2f de PIB per capita\n", PIB_PC2);
+        printf("Contra: R$%.2f de PIB per capita da Cidade de Salvador\n", PIB_PC1);
     }
     return 0;
 }
