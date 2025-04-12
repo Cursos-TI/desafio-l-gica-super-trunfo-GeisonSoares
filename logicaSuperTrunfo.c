@@ -1,43 +1,60 @@
 #include <stdio.h>
 
-// Desafio Super Trunfo - Países
-// Tema 2 - Comparação das Cartas
-// Este código inicial serve como base para o desenvolvimento do sistema de comparação de cartas de cidades. 
-// Siga os comentários para implementar cada parte do desafio.
 
-int main() {
-    // Definição das variáveis para armazenar as propriedades das cidades
-    // Você pode utilizar o código do primeiro desafio
+int main()
+{   
+//Variáveis Fixas
+    char Estado1 = 'A';
+    char Estado2 = 'H';
+    char COD_CARD1[4] = "01A"; 
+    char Nome_City1[30] = "Salvador";
+    char COD_CARD2[4] = "08H"; 
+    char Nome_City2[30] = "Sao_Paulo";
+    int Populacao1 = 3573973;
+    int Populacao2 = 11451999;
+    float Area1 = 693.8;
+    float Area2 = 1521;
+    double PIB_1 = 62954000000;
+    double PIB_2 = 828980000000;
+    int QTD_P_Turismo1 = 408;
+    int QTD_P_Turismo2 = 36;
+    float DensidadePP1 = Populacao1 / Area1;
+    float DensidadePP2 = Populacao2 / Area2;
+    float PIB_PC1 = PIB_1 / Populacao1;
+    float PIB_PC2 = PIB_2 / Populacao2;
+    int escolha;
+ 
 
-    
-    // Cadastro das Cartas:
-    // Implemente a lógica para solicitar ao usuário que insira os dados das cidades
-    // utilizando a função scanf para capturar as entradas.
-    // utilize o código do primeiro desafio
+//Apresentação do CAR GAME e das Cidades sorteadas
+        printf("Os CARDS Apresentados são: Salvador vs São Paulo\n\n");
+        printf("Escolha [1] para Salvador ou [2] para São Paulo: \n");
+             scanf("%d", &escolha);
+//Informa a Cidade e seus atributos a depender da escolha do usuário
+    if (escolha == 1) {
+            printf("Sua escolha foi Salvador\n\n");
+            printf("Carregando atributos do CARD escolhido...\n");
+            printf("\n\nEstado: %c\nCódigo da Cidade: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea Total: %.2f km²\nPIB: R$%.2f\nQuantidade de Pontos Turísticos: %d\n",
+                    Estado1, COD_CARD1, Nome_City1, Populacao1, Area1, PIB_1, QTD_P_Turismo1);
+    } else { 
+            printf("\n\n\nSua escolha foi São Paulo\n\n ");
+            printf("Carregando atributos do CARD escolhido...\n");
+            printf("\n\nEstado: %c\nCódigo da Cidade: %s\nNome da Cidade: %s\nPopulação: %d\nÁrea Total: %.2f km²\nPIB: R$%.2f\nQuantidade de Pontos Turísticos: %d\n",
+                    Estado2, COD_CARD2, Nome_City2, Populacao2, Area2, PIB_2, QTD_P_Turismo2);
+    }
 
-    // Exemplo:
-    // printf("Digite o código da cidade: ");
-    // scanf("%s", codigo);
-    // 
-    // (Repita para cada propriedade)
+//Simula o processo de escolha do atributo de comparação           
+        printf("\n\nEscolhendo um ATRIBUTO de comparação aleatória...\n\n");
+        printf("Analisando atributo...\n");
+        printf("Atributo escolhido: PIB per capita\n");
 
-    // Comparação de Cartas:
-    // Desenvolva a lógica de comparação entre duas cartas.
-    // Utilize estruturas de decisão como if, if-else para comparar atributos como população, área, PIB, etc.
-
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
-
-    // Exibição dos Resultados:
-    // Após realizar as comparações, exiba os resultados para o usuário.
-    // Certifique-se de que o sistema mostre claramente qual carta venceu e com base em qual atributo.
-
-    // Exemplo:
-    // printf("A cidade vencedora é: %s\n", cidadeVencedora);
-
+//Atraves da escolha do atributo predeterminado, realiza a comparação e exibe o vencedor
+    if (PIB_PC1 > PIB_PC2){
+        printf("Vencedor: Salvador com R$%.3f de PIB per capita\n", PIB_PC1);
+        printf("Contra: R$%.3f de PIB per capita da Cidade de São Paulo\n", PIB_PC2);
+    } else{
+        printf("Vencedor: São Paulo com R$%.3f de PIB per capita\n", PIB_PC2);
+        printf("Contra: R$%.3f de PIB per capita da Cidade de Salvador\n", PIB_PC1);
+    }
     return 0;
 }
+//Fim!
