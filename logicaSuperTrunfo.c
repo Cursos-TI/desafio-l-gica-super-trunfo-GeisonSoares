@@ -8,7 +8,7 @@ int main() {
     char Nome_City1[30] = "Salvador";
     int Populacao1 = 3573973;
     float Area1 = 693.8;
-    long long PIB_1 = 62954000000LL;
+    double PIB_1 = 62954000000LL;
     int QTD_P_Turismo1 = 408;
     float DensidadePP1 = (float)Populacao1 / Area1;
     float PIB_PC1 = PIB_1 / Populacao1;
@@ -19,7 +19,7 @@ int main() {
     char Nome_City2[30] = "Sao_Paulo";
     int Populacao2 = 11451999;
     float Area2 = 1521;
-    long long PIB_2 = 828980000000LL;
+    double PIB_2 = 828980000000;
     int QTD_P_Turismo2 = 36;
     float DensidadePP2 = (float)Populacao2 / Area2;
     float PIB_PC2 = PIB_2 / Populacao2;
